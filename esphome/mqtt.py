@@ -117,6 +117,7 @@ def prepare(
         )
 
     try:
+        client.tls_set()
         host = str(config[CONF_MQTT][CONF_BROKER])
         port = int(config[CONF_MQTT][CONF_PORT])
         client.connect(host, port)
